@@ -1,0 +1,45 @@
+@import url("indice.css");
+:root{
+    --borde: 2px solid #b30059;
+    --fondo-encabezados: rgb(255, 182, 193);
+    --texto-encabezados:rgb(128, 0, 90);
+    --impares: #ffdeee;
+    --pares: #ffb7ed;
+    --texto-destacado:white;
+    --fondo-destacado:#ff69b4;
+}
+table, td, th {
+    table-layout: fixed;
+    width: 100%;
+    border: var(--borde); /* Rosa oscuro */
+    border-collapse: collapse;
+    font-family: 'Times New Roman', Times, serif;
+}
+th {
+    letter-spacing: 0.5px;
+    background-color: var(--fondo-encabezados); /* Rosa claro */
+    color: var(--texto-encabezados); /* Púrpura oscuro para texto */
+    overflow: hidden;
+    word-wrap: break-word;
+}
+td {
+    letter-spacing: 1px;
+    text-align: center;
+    overflow: hidden;
+    word-wrap: break-word;
+}
+tr:nth-child(odd) {
+    background-color: var(--impares); /* Rosa muy claro */
+}
+tr:nth-child(even) {
+    background-color: var(--pares); /* Rosa claro */
+}
+tr:hover {
+    background-color: var(--fondo-destacado); /* Rosa fuerte (Hot Pink) al pasar el mouse */
+    color: var(--texto-destacado); /* Texto en blanco al pasar el mouse */
+}
+
+table {
+    table-layout: fixed;  /* Fija el tamaño de las celdas */
+    width: 100%;  /* Hace que la tabla ocupe el 100% del ancho */
+}

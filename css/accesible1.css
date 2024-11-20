@@ -1,0 +1,208 @@
+
+@import url("indice.css");  /*Importa el archivo de estilos "indice.css" */
+
+/* General */
+:root {
+    --color1: #005a7e; /*color títulos, fondo enlaces, fondo pie de página*/
+    --color2: #e1f5fe; /*fondo cabecera, fondo índices*/
+    --color3: #f0f9ff; /*fondo página*/
+    --color4: #333; /*color texto principal*/
+    --color5: 0 0 10px rgba(0, 0, 0, 0.1); /*sombreado*/
+    --color6: #fff; /*Fondo contenido, texto pie de pagina, color enlaces pinchados*/
+    --colorEnlace: #ff8800; /* Color más llamativo para los enlaces */
+    --colorEnlaceHover: #ff5500; /* Color más llamativo para hover y focus en enlaces */
+    --colorFocus: #ff0000; /* Color muy llamativo para el foco */
+    --tamanoTexto: 40px; /* Tamaño del texto general */
+    --tamanoEnlace: 40px; /* Tamaño de texto para los enlaces */
+    --tamanoImagen: 150%; /* Tamaño más grande para las imágenes */
+}
+
+/* Enlaces */
+header a {
+    color: var(--colorEnlace); /* Modificación -> Color de los enlaces en cabecera más llamativo */
+    text-decoration: none;
+    font-size: var(--tamanoEnlace); /* Modificación -> Tamaño del texto más grande */
+}
+
+main a {
+    color: var(--colorEnlace); /* Modificación -> Color de los enlaces principal más llamativo */
+    padding: 10px; /* Modificación -> Más espacio para mejorar accesibilidad */
+    border-radius: 3px;
+    transition: background-color 0.3s;
+    line-height: 2.5;
+    font-size: var(--tamanoEnlace); /* Modificación -> Tamaño del texto más grande */
+}
+
+main a:hover, main a:focus {
+    background-color: var(--colorEnlaceHover); /* Modificación -> Color de fondo en hover más llamativo */
+    color: var(--color6);
+    outline: 2px solid var(--colorFocus); /* Modificación -> Borde visible para el estado de focus */
+}
+
+nav a {
+    color: var(--colorEnlace); /* Modificación -> Color de los enlaces en nav más llamativo */
+    text-decoration: none;
+    border-radius: 3px;
+    transition: background-color 0.3s;
+    padding: 10px;
+    font-size: var(--tamanoEnlace); /* Modificación -> Tamaño del texto más grande */
+}
+
+nav a:hover, nav a:focus {
+    background-color: var(--colorEnlaceHover); /* Modificación -> Color de fondo en hover más llamativo */
+    color: var(--color6);
+    outline: 2px solid var(--colorFocus); /* Modificación -> Borde visible para el estado de focus */
+}
+
+.miga a {
+    color: var(--colorEnlace); /* Modificación -> Color de los enlaces más llamativo */
+    font-size: var(--tamanoEnlace); /* Modificación -> Tamaño del texto más grande */
+}
+
+footer a {
+    color: var(--color6);
+    padding: 10px; /* Modificación -> Más espacio para accesibilidad */
+    border-radius: 3px;
+    transition: background-color 0.3s;
+    font-size: var(--tamanoEnlace); /* Modificación -> Tamaño del texto más grande */
+}
+
+footer a:hover, footer a:focus {
+    background-color: var(--colorEnlaceHover); /* Modificación -> Color más llamativo en hover */
+    color: var(--color1);
+    outline: 2px solid var(--colorFocus); /* Modificación -> Borde visible para el estado de focus */
+}
+
+/* Cuerpo */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.8; /* Modificación -> Mejora en la legibilidad */
+    background-color: var(--color3);
+    color: var(--color4);
+    font-size: var(--tamanoTexto); /* Modificación -> Aumento del tamaño de la fuente general */
+}
+
+/* Cabecera */
+header {
+    background-color: var(--color2);
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: var(--color5);
+    padding: 20px; /* Modificación -> Aumento del padding para mejorar la accesibilidad */
+}
+
+header h1 {
+    text-align: center;
+    font-size: 2.5rem; /* Modificación -> Aumento del tamaño del título principal */
+}
+
+/* Main */
+main {
+    margin: 15px;
+}
+
+/* Índice alfabético */
+.alfabeto {
+    display: block;
+    list-style-type: none;
+    padding-bottom: 5px;
+    padding-left: 0;
+    text-align: center;
+    background-color: var(--color2);
+    border-radius: 5px;
+    box-shadow: var(--color5);
+}
+
+.alfabeto li {
+    display: inline;
+    margin-right: 15px;
+    margin-bottom: 0;
+}
+
+.alfabeto h2 {
+    text-align: center;
+    font-size: 2rem; /* Modificación -> Aumento del tamaño de los títulos */
+}
+
+/* Índice navegación */
+.sidebar-nav {
+    overflow-wrap: break-word;
+    background-color: var(--color2);
+    border-radius: 5px;
+    box-shadow: var(--color5);
+}
+
+.sidebar-nav a {
+    font-size: var(--tamanoEnlace); /* Modificación -> Tamaño del texto de los enlaces en barra lateral */
+}
+
+/* Content */
+.content {
+    background: var(--color6);
+    box-shadow: var(--color5);
+    border-radius: 5px;
+    padding: 30px; /* Modificación -> Más padding para mejorar la accesibilidad */
+    margin-top: 20px;
+}
+
+/* Navegación */
+nav {
+    line-height: 2.8; /* Modificación -> Aumento del espacio entre líneas para mejorar legibilidad */
+}
+
+/* Media Queries */
+@media (min-width: 481px) {
+    .container {
+        display: flex;
+    }
+
+    .sidebar-nav {
+        width: 250px; /* Modificación -> Aumento del ancho de la barra lateral */
+        padding: 15px;
+        margin-top: 20px;
+    }
+
+    .sidebar-nav ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    .sidebar-nav li {
+        margin-bottom: 15px; /* Modificación -> Más espacio entre los elementos de la lista */
+    }
+
+    .sidebar-nav a {
+        display: block;
+        padding: 15px; /* Modificación -> Más padding para accesibilidad */
+    }
+
+    .content {
+        flex: 1;
+        padding: 25px;
+    }
+}
+
+/* Color encabezados */
+h1, h2, h3, h4 {
+    color: var(--color1);
+    font-size: 2rem; /* Modificación -> Aumento del tamaño de los encabezados */
+}
+
+/* Imágenes */
+img {
+    max-width: var(--tamanoImagen); /* Modificación -> Aumento del tamaño de las imágenes */
+    height: auto;
+}
+
+/* Pie de página */
+footer {
+    background: var(--color1);
+    color: var(--color6);
+    padding: 20px; /* Modificación -> Más padding para accesibilidad */
+    text-align: center;
+    bottom: 0;
+    border-radius: 5px;
+    box-shadow: var(--color5);
+}
+
+

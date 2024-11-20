@@ -1,0 +1,28 @@
+@import url("indice.css");
+body {
+    display:block;
+    font-size: 15px;
+    margin: 10px;
+    width:100%;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+h1, h2, h3, h4 {
+    text-align: center;
+    font-size: 1.5em;
+}
+head, body, main, h1, h2, h3, h4 {
+    max-width: 100%;  /* El texto no excederá el 100% del contenedor */
+    word-wrap: break-word;  /* Romperá las palabras largas si es necesario */
+}
+
+body{
+    font-family: Arial;
+}
+
+
+

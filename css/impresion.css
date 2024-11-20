@@ -1,0 +1,97 @@
+@import url(indice.css);
+:root {
+    --color1: rgb(65, 64, 64); /*color titulos, fondo enlaces, fondo pie de pagina*/
+    --color2: white; /*fondo cabecera, fondo índices*/
+    --color3: white; /*fondo página*/
+    --color4: black; /*color texto principal*/
+    --color5: none; /*sombreado*/
+    --color6: white; /*Fondo contenido, texto pie de pagina, color enlaces pinchados*/
+    --borde: 2px solid black;
+    --fondo-encabezados: white;
+    --texto-encabezados:black;
+    --impares: rgb(196, 196, 196);
+    --pares: #dfdfdf;
+}
+body{
+    font-family:serif;
+    font-size: 14pt;
+    color: var(--color4);
+}
+
+footer a{
+    color: var(--color2);
+}
+
+.url::after {
+    content: " (" attr(href) ")"; /* Muestra el URL del enlace */
+    font-size: 0.8em; /* Tamaño más pequeño para el URL */
+    color: var(--color1);
+    text-decoration: underline;
+}
+header .url::after{
+    color:var(--color1);
+}
+footer .url::after{
+    color:var(--color2);
+}
+.url{
+    text-decoration: underline;
+}
+.content a{
+    text-decoration: underline;
+}
+
+header img {
+    display: none; 
+}
+
+nav{
+    display:none;
+}
+.alfabeto{
+    display:none;
+}
+form{
+    display:none;
+}
+@page {
+    size: A4;
+    margin: 0.5in;
+}
+
+h1, h2, h3,h4 {
+    color: var(--color1);
+    page-break-after: avoid; /* Evita saltos de página después de encabezados */
+}
+
+p {
+    widows: 2; /* Mantiene al menos 2 líneas juntas al final de un párrafo */
+    orphans: 2; /* Mantiene al menos 2 líneas juntas al principio de un párrafo */
+}
+.content {
+    border-radius: none;
+    margin-top: 20px;
+    margin:0;
+    padding: 5px;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+table{
+    max-width: 100%;
+    height: auto;
+}
+table, td, th,tr{
+    color:none;
+}
+.video{
+    display:none;
+}
+.url-video{
+    display:block;
+}
+.url-video::after{
+    content: " (" attr(href) ")"; /* Muestra el URL del enlace */
+}
+

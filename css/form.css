@@ -1,0 +1,18 @@
+@import url("indice.css");
+legend {
+    font-weight: bold;
+}
+fieldset{
+    width: 25em;
+    padding: 0.7em;
+}
+label {
+    float: left;
+}
+
+input {
+    float: none;
+}
+.centrado {
+    margin: 40px auto;
+}

@@ -1,0 +1,10 @@
+@import url("indice.css");
+:root {
+    --color1: #ffcc00; /* Color para títulos, fondo de enlaces y pie de página (azul oscuro) */
+    --color2: #333333; /* Fondo de cabecera y fondos de índices (amarillo brillante) */
+    --color3: #181515; /* Fondo de la página (azul muy claro) */
+    --color4: #ffcc00; /* Color de texto principal (casi negro) */
+    --color5: 0 0 10px rgba(255, 255, 255, 0.5); /* Sombreado (más intenso) */
+    --color6: black; /* Fondo del contenido, texto del pie de página y color de enlaces pinchados (blanco) */
+}
+
